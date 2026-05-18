@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Environments
+.env
+.venv/
+env/
+venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Checkpoints / model weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+
+# Data artifacts
+*.arrow
+*.cache
+
+# Wandb
+wandb/
+
+# Output
+output/
+outputs/
+saves/
+results/
+.github/

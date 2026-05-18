@@ -1,0 +1,44 @@
+transformers==4.57.0
+# 使用qwen-omni模型时，transformers==4.54.0
+# 使用qwen3-vl, qwen3-next模型时，transformers==4.57.0
+datasets==3.2.0
+# jemalloc coredump https://github.com/apache/arrow/issues/44342 
+pyarrow==15.0.0
+# 否则和transformer冲突：https://github.com/instructlab/instructlab/issues/3456
+accelerate==1.7.0
+peft==0.14.0
+trl==0.28.0
+# NOTE: Do NOT install vllm here - it breaks flash-attn compatibility
+# The cluster image (pytorch280) has a pre-installed vllm that is compatible
+# TRL's vllm check is just a warning for optional vllm-based generation features
+tyro==0.8.14
+scipy
+einops
+sentencepiece
+protobuf
+jieba
+rouge-chinese
+nltk==3.8.1
+uvicorn
+pydantic
+pynvml>=12.0.0
+pillow>=10.1.0
+fastapi
+sse-starlette
+matplotlib
+deepspeed==0.16.2
+transformers_stream_generator
+auto-gptq
+optimum
+tiktoken
+numpy==1.26.4
+openlm-hub>=0.0.64
+pytest
+ml_tracker
+librosa
+av
+timm
+liger_kernel
+qwen-omni-utils[decord]
+python-dotenv
+decord

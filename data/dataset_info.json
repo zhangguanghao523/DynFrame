@@ -1,0 +1,33 @@
+{
+  "actnet_fps": {
+    "file_name": "data/DM-CoT-74k/actnet_fps.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "video": "video"
+    },
+    "tags": {
+      "role_tag": "from",
+      "content_tag": "value",
+      "user_tag": "human",
+      "assistant_tag": "gpt"
+    }
+  },
+  "charades_fps_grpo": {
+    "file_name": "data/DM-RL-45k/charades_fps_grpo.jsonl",
+    "formatting": "alpaca",
+    "columns": {
+      "prompt": "prompt",
+      "query": "prompt",
+      "response": "",
+      "history": "",
+      "video": "video"
+    },
+    "extras": {
+      "answer": "answer",
+      "fps": "fps",
+      "gt_span_start": "gt_span_start",
+      "gt_span_end": "gt_span_end"
+    }
+  }
+}

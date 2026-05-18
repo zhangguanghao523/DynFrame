@@ -1,0 +1,56 @@
+[
+    {
+      "index": 0,
+      "video": [
+        "data/videos/ActivityNet/v_QOlSCBRmfWY.mp4"
+      ],
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<video>\nGive you a textual query: A young woman is seen standing in a room and leads into her dancing.\nWhen does the described content occur in the video?\nPlease return the timestamp in seconds."
+        },
+        {
+          "from": "gpt",
+          "value": "<think>Let me break down the sentence: \"A young woman is seen standing in a room and leads into her dancing.\" So, I need to find the period where the woman is first just standing, and then the transition as she begins to dance. <span>0.83 - 19.86</span><fps>2</fps><video>\n Looking at the images:\n- At 0.00s to about 4.83s, she is standing still, maybe shifting weight but not yet dancing.\n- At 6.20s, she starts to move more, but it still looks like a lead-in, not full dancing.\n- At 6.89s, her arms are up and she is clearly starting to dance.\n- From 7.58s onward, she is definitely dancing, with more expressive movements.\n- The event should end when this \"lead into her dancing\" phase is over and she is fully into the dance.\n\nNow, when does this event end? The sentence is about the transition from standing to dancing, so the end should be when she is fully engaged in the dance, not just the first movement. Looking at the sequence, by 19.86s, she is on the floor, fully into the choreography, and the transition is complete.\n\nSo, the event starts just after the initial standing (she is seen standing), and ends when she is fully into her dance routine, which is around 19.86s.\n\nLet me check the start time: the first image where she is standing is at 0.00s, but the event is about \"is seen standing and leads into her dancing,\" so the standing part is included. The start should be just after the initial second, so 0.83s makes sense as the start of the event.</think><answer>0.83 - 19.86</answer>"
+        }
+      ],
+      "gemini_suggested_fps": 2,
+      "original_fps": 2
+    },
+    {
+      "index": 1,
+      "video": [
+        "data/videos/ActivityNet/v_ehGHCYKzyZ8.mp4"
+      ],
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<video>\nGive you a textual query: The woman ends with a final title logo sequence.\nWhen does the described content occur in the video?\nPlease return the timestamp in seconds."
+        },
+        {
+          "from": "gpt",
+          "value": "<think>Let me look through the video frames to find when the final title logo sequence appears, as this is what the sentence is describing. <span>56.47 - 61.72</span><fps>3</fps><video>\n The video shows two people exercising for most of the duration, with a website overlay appearing near the end. Around 57.09 seconds, there is a transition effect, and at 57.61 seconds, the logo \"Steps to a  Florida Hillsborough County\" appears. This logo remains on screen through the last frames, up to the end at 61.72 seconds. The event is about the woman ending with this final title logo sequence, so the relevant segment is from when the logo first appears after the exercise ends, until the video ends. Let me double-check: the last frame with the people is at 56.58 seconds, and the logo appears at 57.61 seconds, lasting until 61.72 seconds.</think><answer>56.47 - 61.72</answer>"
+        }
+      ],
+      "gemini_suggested_fps": 3,
+      "original_fps": 2
+    },
+    {
+      "index": 2,
+      "video": [
+        "data/videos/ActivityNet/v_LNKdVrX_0Fg.mp4"
+      ],
+      "conversations": [
+        {
+          "from": "human",
+          "value": "<video>\nGive you a textual query: She lays out wrapping paper, showing how to wrap a toy in it.\nWhen does the described content occur in the video?\nPlease return the timestamp in seconds."
+        },
+        {
+          "from": "gpt",
+          "value": "<think>Let me look through the sequence of images to find when the person starts laying out the wrapping paper and begins the process of showing how to wrap a toy in it. <span>22.67 - 179.11</span><fps>1</fps><video>\n First, the initial frames (0.00 - 24.56s) show the person talking, then at 26.45s, the camera shifts to a table with wrapping paper, scissors, tape, and a toy box. At 41.57s, the person starts unrolling the wrapping paper, and by 43.45s, the paper is fully laid out. The toy box is placed on the paper at 45.34s, and the process of measuring, cutting, and wrapping begins. \n\nThe wrapping process continues through many frames, with the person folding, taping, and wrapping the box. This continues until 179.49s, where the last visible wrapping action is taking place. At 204.05s, the box is fully wrapped and the person is done with the demonstration.\n\nLet me double-check: 22.67s is when the hands are first seen near the wrapping paper, and 179.11s is just before the wrapping is fully finished and the demonstration ends.</think>\n<answer>22.67 - 179.11</answer>"
+        }
+      ],
+      "gemini_suggested_fps": 1,
+      "original_fps": 2
+    }
+]
