@@ -1,8 +1,8 @@
-<h1 align="center">DynFrame</h1>
-<p align="center"><b>Adaptive Reasoning-Driven Multimodal Framework with Dynamic Frame Augmentation for Complex Video Understanding</b></p>
+<h1 align="center">DynFrame: Adaptive Reasoning-Driven Multimodal Framework with Dynamic Frame Augmentation for Complex Video Understanding</h1>
 
 <p align="center">
-  <a href="#"><img src="https://img.shields.io/badge/Paper-PDF-red" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2605.26680"><img src="https://img.shields.io/badge/arXiv-2605.26680-b31b1b" alt="arXiv"></a>
+  <a href="https://huggingface.co/datasets/pangzihao/DynFrame_Dataset"><img src="https://img.shields.io/badge/🤗_HuggingFace-Dataset-FFD21E" alt="Dataset"></a>
   <a href="#"><img src="https://img.shields.io/badge/License-Apache_2.0-green" alt="License"></a>
 </p>
 
@@ -11,7 +11,7 @@
 Traditional Textual CoT (left) reasons over a fixed sparse frame set and misses critical visual evidence. DynFrame (right) emits `<span>` and `<fps>` tokens within its reasoning to retrieve a denser, temporally focused frame set, then continues reasoning over the augmented visual context.
 
 <p align="center">
-  <img src="assets/fig1_comparison.png" width="800" alt="Comparison between Textual CoT and DynFrame">
+  <img src="assets/fig1_comparison.png" width="600" alt="Comparison between Textual CoT and DynFrame">
 </p>
 
 ## 🔥 Highlights
@@ -90,6 +90,8 @@ bash scripts/eval/inference.sh
 
 ## 📦 Datasets
 
+📥 **Download:** [🤗 HuggingFace — DynFrame_Dataset](https://huggingface.co/datasets/pangzihao/DynFrame_Dataset)
+
 ### DM-CoT-74k (SFT)
 
 74k samples with interleaved reasoning trajectories, including explicit `<span>`/`<fps>` retrieval commands and grounded reasoning. Format: ShareGPT.
@@ -139,19 +141,20 @@ to dance. <span>0.83 - 19.86</span><fps>2</fps><video>
 The data curation pipeline covers data collection from existing benchmarks, evidence window & FPS annotation via Gemini-2.5-Pro, and multi-stage quality control (rule-based filtering, cross-modal QA filtering, GT answer verification).
 
 <p align="center">
-  <img src="assets/fig3_data_pipeline.png" width="800" alt="Data Curation Pipeline">
+  <img src="assets/fig3_data_pipeline.png" width="600" alt="Data Curation Pipeline">
 </p>
 
-Training data is curated from: [Charades-STA](https://prior.allenai.org/projects/charades), [ActivityNet](http://activity-net.org/), [Video-R1](https://github.com/tulerfeng/Video-R1), [ReXTime](https://arxiv.org/abs/2406.19392), and [NExT-GQA](https://doc-doc.github.io/docs/nextgqa.html). Temporal evidence and FPS annotations are generated using Gemini-2.5-Pro with a two-stage prompting pipeline (see paper §3.3 for details).
+ Temporal evidence and FPS annotations are generated using Gemini-2.5-Pro with a two-stage prompting pipeline (see paper §3.3 for details).
 
 ## 📝 Citation
 
 If you find this work useful, please cite:
 
 ```bibtex
-@article{dynframe2026,
+@article{zhang2026dynframe,
   title={DynFrame: Adaptive Reasoning-Driven Multimodal Framework with Dynamic Frame Augmentation for Complex Video Understanding},
-  author={Anonymous},
+  author={Zhang, Peng and Zhang, Guanghao and He, Wanggui and Zhang, Longxiang and Liu, Mushui and Xia, Yan and Peng, Zhenhao and Dai, Weilong and Liu, Jinlong and Tang, Haobing and Zhang, Le and Jiang, Hao and Huang, Pipei},
+  journal={arXiv preprint arXiv:2605.26680},
   year={2026}
 }
 ```
