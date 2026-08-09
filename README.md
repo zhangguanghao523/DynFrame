@@ -1,3 +1,5 @@
+
+
 <h1 align="center">DynFrame: Adaptive Reasoning-Driven Multimodal Framework with Dynamic Frame Augmentation for Complex Video Understanding</h1>
 
 <p align="center">
@@ -85,7 +87,7 @@ bash scripts/train/DynFrame_grpo.sh
 ### Inference
 
 ```bash
-bash scripts/eval/inference.sh
+bash scripts/eval/inference.sh  # Note: update the local paths in the script to match your environment before running.
 ```
 
 ## 📦 Datasets
